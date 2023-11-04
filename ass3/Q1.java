@@ -3,11 +3,12 @@ public class Q1{
         Hi obj1 = new Hi();
         Hello obj2 = new Hello();
         obj1.start();
-   
-        System.out.println(obj1.getPriority());
-        try{Thread.sleep(100);}catch(Exception e){}
+        try{
+            Thread.sleep(10);
+        }catch(Exception e){
+            
+        }
         obj2.start();
-        System.out.println(obj1.getPriority());
     }
 }
 class Hi extends Thread{

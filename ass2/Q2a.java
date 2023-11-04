@@ -4,7 +4,7 @@ public class Q2a {
     public static void main(String[] args){
         long starttime = System.nanoTime();
         try{
-            FileInputStream fin = new FileInputStream("/home/akashakp0037/CN_2141016135/ass1/akash.txt");
+            FileInputStream fin = new FileInputStream("/home/akashakp0037/CN_2141016135/ass2/akash.txt");
             BufferedInputStream fis = new BufferedInputStream(fin);
             int data = fis.read();
             while(data!=-1){
