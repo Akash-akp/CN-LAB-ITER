@@ -6,10 +6,10 @@ public class Q2 {
         Scanner sc = new Scanner(System.in);
         try{
             String web1 = sc.nextLine();
-			String Address1 = InetAddress.getByName(web1).toString();
             String web2 = sc.nextLine();
-			String Address2 = InetAddress.getByName(web2).toString();
-            if(Address1.equals(Address2)){
+			URL u1 = new URL(web1);
+            URL u2 = new URL(web2);
+            if(u1.equals(u2)){
                 System.out.println("2 sites are equal");
             }else{
                 System.out.println("2 sites are not equal");

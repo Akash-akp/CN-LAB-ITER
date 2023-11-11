@@ -13,9 +13,16 @@ public class Q1 {
             new InputStreamReader(u.openStream())
         );
         String readLine;
-        while((readLine = in.readLine())!=null){
+		try {
+			FileOutputStream fis = new FileOutputStream("/home/akashakp0037/CN_2141016135/ass5/akash.html");
+            while((readLine = in.readLine())!=null){
             System.out.println(readLine);
         }
+			fis.close();
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+       
         in.close();
     }
 }
