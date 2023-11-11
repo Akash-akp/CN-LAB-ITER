@@ -5,8 +5,10 @@ public class Q2 {
     public static void main(String []args){
         Scanner sc = new Scanner(System.in);
         try{
-            String web1 = sc.nextLine();
-            String web2 = sc.nextLine();
+            // String web1 = sc.nextLine();
+            // String web2 = sc.nextLine();
+            String web1 = "https://www.ibiblio.org/";
+            String web2 = "https://www.ibiblio.org/";
 			URL u1 = new URL(web1);
             URL u2 = new URL(web2);
             if(u1.equals(u2)){
