@@ -16,13 +16,12 @@ public class Q1 {
 		try {
 			FileOutputStream fis = new FileOutputStream("/home/akashakp0037/CN_2141016135/ass5/akash.html");
             while((readLine = in.readLine())!=null){
-            System.out.println(readLine);
-        }
+                fis.write(readLine);
+            }
+            in.close();
 			fis.close();
 		}catch(Exception e) {
 			System.out.println(e);
 		}
-       
-        in.close();
     }
 }
