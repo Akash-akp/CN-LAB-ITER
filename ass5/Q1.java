@@ -12,16 +12,18 @@ public class Q1 {
         BufferedReader in = new BufferedReader(
             new InputStreamReader(u.openStream())
         );
+        BufferedWriter writer = new BufferedWriter(new FileWriter("Download.html"));
         String readLine;
-		try {
-			FileOutputStream fis = new FileOutputStream("/home/akashakp0037/CN_2141016135/ass5/akash.html");
-            while((readLine = in.readLine())!=null){
-                fis.write(readLine);
-            }
-            in.close();
-			fis.close();
-		}catch(Exception e) {
-			System.out.println(e);
-		}
+        System.out.println("WebPage Content:");
+		while((readLine=in.readLine())!=null){
+            System.out.println(readLine);
+            writer.write(readLine);
+            writer.newLine();
+        }
+        in.close();
+        System.out.println("\nobjects:");
+        Object o = u.getContent();
+        System.out.println(o.getClass().getName());
+
     }
 }
