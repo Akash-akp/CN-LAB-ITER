@@ -7,19 +7,16 @@ public class Q2 {
     String web = "time.nist.gov";
 
     try {
-      Socket theSocket = new Socket(web, 13);
-      InputStream timeStream = theSocket.getInputStream();
-      StringBuffer time = new StringBuffer();
+      Socket s = new Socket(web, 13);
+      InputStream timeStream = s.getInputStream();
       int c;
+      System.out.println("Time is ");
       while ((c = timeStream.read()) != -1)
-        time.append((char) c);
-      String timeString = time.toString().trim();
-      System.out.println("It is " + timeString + " at " + web);
+        System.out.print((char) c);
+      System.out.println();
     } 
-    catch (UnknownHostException ex) {
-      System.err.println(ex);
-    } catch (IOException ex) {
-      System.err.println(ex);
+    catch (Exception e) {
+      System.err.println(e);
     }
 
   }
